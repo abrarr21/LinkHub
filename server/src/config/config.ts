@@ -6,6 +6,7 @@ const envSchema = z.object({
   PORT: z.coerce.number(),
   MONGODB_URI: z.string(),
   NODE_ENV: z.string(),
+  PINO_LOG_LEVEL: z.string(),
 });
 
 const env = envSchema.safeParse(process.env);
